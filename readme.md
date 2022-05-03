@@ -57,8 +57,8 @@ configurator.CustomParameters += (s, e) => {
 <!-- default file list -->
 *Files to look at*:
 
-* [Index.cshtml](./CS/AspNetCoreDashboard/Pages/Home/Index.cshtml)
-* [_Layout.cshtml](./CS/AspNetCoreDashboard/Pages/Home/_Layout.cshtml)
+* [Index.cshtml](./CS/AspNetCoreDashboard/Pages/Index.cshtml)
+* [_Layout.cshtml](./CS/AspNetCoreDashboard/Pages/_Layout.cshtml)
 * [DashboardUtils.cs](./CS/AspNetCoreDashboard/Code/DashboardUtils.cs)
 <!-- default file list end -->
 
