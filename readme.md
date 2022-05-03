@@ -57,12 +57,12 @@ configurator.CustomParameters += (s, e) => {
 <!-- default file list -->
 *Files to look at*:
 
-* [Index.cshtml](./CS/AspNetCoreDashboard/Views/Home/Index.cshtml)
-* [_Layout.cshtml](./CS/AspNetCoreDashboard/Views/Home/_Layout.cshtml)
+* [Index.cshtml](./CS/AspNetCoreDashboard/Pages/Home/Index.cshtml)
+* [_Layout.cshtml](./CS/AspNetCoreDashboard/Pages/Home/_Layout.cshtml)
 * [DashboardUtils.cs](./CS/AspNetCoreDashboard/Code/DashboardUtils.cs)
 <!-- default file list end -->
 
 ## Documentation
 
-[Master Filtering](https://docs.devexpress.com/Dashboard/117060/web-dashboard/create-dashboards-on-the-web/interactivity/master-filtering)
-[Manage an In-Memory Data Cache](https://docs.devexpress.com/Dashboard/400983/web-dashboard/dashboard-backend/manage-an-in-memory-data-cache)
+* [Master Filtering](https://docs.devexpress.com/Dashboard/117060/web-dashboard/create-dashboards-on-the-web/interactivity/master-filtering)
+* [Manage an In-Memory Data Cache](https://docs.devexpress.com/Dashboard/400983/web-dashboard/dashboard-backend/manage-an-in-memory-data-cache)
