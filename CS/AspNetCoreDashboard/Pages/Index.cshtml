@@ -6,24 +6,6 @@
     .Width("100%")
     .Height("100%")
     .WorkingMode(DevExpress.DashboardWeb.WorkingMode.Viewer)
-    .OnBeforeRender("onBeforeRender")
-       .Extensions(ext =>
-               {
-                ext.MobileLayout(options =>
-                {
-                    //options.MobileLayoutEnabled(MobileLayoutMode.Auto);
-                });
-                ext.DataInspector(options =>
-                {
-                    options.AllowInspectAggregatedData(true);
-                    options.AllowInspectRawData(true);
-                });
-                ext.DataSourceWizard(options =>
-                {
-                    options.EnableCustomSql(true);
-                });
-
-            })
-            
+    .OnBeforeRender("onBeforeRender")            
 )
 </div>

@@ -1,7 +1,7 @@
 {
-    "name": "AspNetCoreDashboard",
-    "version": "1.0.0",
-    "private": true,
+  "name": "AspNetCoreDashboard",
+  "version": "1.0.0",
+  "private": true,
   "dependencies": {
     "devextreme": "21.2-stable",
     "@devexpress/analytics-core": "21.2-stable",
