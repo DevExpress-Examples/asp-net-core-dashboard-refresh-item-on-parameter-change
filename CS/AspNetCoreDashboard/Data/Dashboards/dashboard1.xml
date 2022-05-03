@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard>
+  <Title Text="Sample Dashboard" />
+  <DataSources>
+    <SqlDataSource Name="Invoices" ComponentName="sqlDataSource2">
+      <Connection Name="NWindConnectionString" FromAppConfig="true" />
+      <Query Type="SelectQuery" Name="Invoices">
+        <Parameter Name="ProductIdParameter" Type="DevExpress.DataAccess.Expression">(System.Int32)(?ProductIdParameter)</Parameter>
+        <Tables>
+          <Table Name="Invoices" />
+        </Tables>
+        <Columns>
+          <AllColumns Table="Invoices" />
+        </Columns>
+        <Filter>[Invoices.ProductID] = ?ProductIdParameter</Filter>
+      </Query>
+      <ConnectionOptions CloseConnection="true" />
+    </SqlDataSource>
+    <SqlDataSource Name="Products" ComponentName="sqlDataSource3">
+      <Connection Name="NWindConnectionString" FromAppConfig="true" />
+      <Query Type="SelectQuery" Name="Products">
+        <Tables>
+          <Table Name="Products" />
+        </Tables>
+        <Columns>
+          <AllColumns Table="Products" />
+        </Columns>
+      </Query>
+      <ConnectionOptions CloseConnection="true" />
+    </SqlDataSource>
+    <SqlDataSource Name="Orders" ComponentName="sqlDataSource1">
+      <Connection Name="NWindConnectionString" FromAppConfig="true" />
+      <Query Type="SelectQuery" Name="Orders">
+        <Tables>
+          <Table Name="Orders" />
+        </Tables>
+        <Columns>
+          <AllColumns Table="Orders" />
+        </Columns>
+      </Query>
+      <ConnectionOptions CloseConnection="true" />
+    </SqlDataSource>
+  </DataSources>
+  <Items>
+    <Grid ComponentName="gridDashboardItem1" Name="Products" DataSource="sqlDataSource3" DataMember="Products">
+      <InteractivityOptions MasterFilterMode="Single" />
+      <DataItems>
+        <Dimension DataMember="ProductName" DefaultId="DataItem0" />
+        <Measure DataMember="UnitPrice" DefaultId="DataItem1" />
+        <Measure DataMember="ProductID" SummaryType="Min" DefaultId="DataItem3" />
+      </DataItems>
+      <HiddenMeasures>
+        <Measure DefaultId="DataItem3" />
+      </HiddenMeasures>
+      <GridColumns>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem0" />
+        </GridDimensionColumn>
+        <GridMeasureColumn>
+          <Measure DefaultId="DataItem1" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions />
+    </Grid>
+    <Chart ComponentName="chartDashboardItem1" Name="Sales per Product" DataSource="sqlDataSource2" DataMember="Invoices">
+      <DataItems>
+        <Measure DataMember="ExtendedPrice" DefaultId="DataItem0" />
+        <Dimension DataMember="OrderDate" DefaultId="DataItem1" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple>
+              <Value DefaultId="DataItem0" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <Grid ComponentName="gridDashboardItem2" Name="Orders" DataSource="sqlDataSource1" DataMember="Orders">
+      <DataItems>
+        <Dimension DataMember="OrderID" DefaultId="DataItem0" />
+        <Dimension DataMember="OrderDate" DateTimeGroupInterval="None" DefaultId="DataItem1" />
+        <Dimension DataMember="CustomerID" DefaultId="DataItem2" />
+      </DataItems>
+      <GridColumns>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem0" />
+        </GridDimensionColumn>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem1" />
+        </GridDimensionColumn>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem2" />
+        </GridDimensionColumn>
+      </GridColumns>
+      <GridOptions />
+    </Grid>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutItem DashboardItem="gridDashboardItem1" Weight="0.5418130709768099" />
+      <LayoutGroup Orientation="Vertical" Weight="1.4581869290231904">
+        <LayoutItem DashboardItem="chartDashboardItem1" Weight="1.4581869290231904" />
+        <LayoutItem DashboardItem="gridDashboardItem2" Weight="1.4581869290231904" />
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

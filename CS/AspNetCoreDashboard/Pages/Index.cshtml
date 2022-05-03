@@ -1,0 +1,29 @@
+﻿@page
+
+<div style="position: absolute; left: 0; top: 0; right: 0; bottom: 0;">
+@(Html.DevExpress().Dashboard("dashboardControl1")
+    .ControllerName("DefaultDashboard")
+    .Width("100%")
+    .Height("100%")
+    .WorkingMode(DevExpress.DashboardWeb.WorkingMode.Viewer)
+    .OnBeforeRender("onBeforeRender")
+       .Extensions(ext =>
+               {
+                ext.MobileLayout(options =>
+                {
+                    //options.MobileLayoutEnabled(MobileLayoutMode.Auto);
+                });
+                ext.DataInspector(options =>
+                {
+                    options.AllowInspectAggregatedData(true);
+                    options.AllowInspectRawData(true);
+                });
+                ext.DataSourceWizard(options =>
+                {
+                    options.EnableCustomSql(true);
+                });
+
+            })
+            
+)
+</div>
