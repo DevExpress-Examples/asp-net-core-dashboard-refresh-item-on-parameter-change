@@ -13,9 +13,9 @@ The example shows how to use dashboard parameters to update a specific dashboard
 ## Example Structure
 
 The dashboard in the example has three items: 
-- The "Products" grid;
-- The "Sales per Product" chart;
-- The "Orders" grid.
+- The "Products" grid
+- The "Sales per Product" chart
+- The "Orders" grid
 
 ![Dashboard](Images/Dashboard.png)
 
