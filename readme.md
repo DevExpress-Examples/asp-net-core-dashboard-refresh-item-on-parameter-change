@@ -1,6 +1,6 @@
 # Dashboard for ASP.NET Core - How to Use Parameters to Update a Specific Dashboard Item Without Refreshing the Entire Dashboard
 
-The example shows how to use dashboard parameters to update a specific dashboard items without refreshing the entire dashboard. This technique applies when you need to filter data source's data to update a specific dashboard item but do not want to refresh data in all items in a dashboard because this operation causes a performance delay.
+The example shows how to use dashboard parameters to update a specific dashboard item without refreshing the entire dashboard. This technique applies when you need to filter a data source's data to update a specific dashboard item, but do not want to refresh data in all items in a dashboard because this operation causes a performance delay.
 
 <!-- default file list -->
 ## Files to Look at
