@@ -21,8 +21,8 @@ The selected master filter value is obtained on the client. The [headers](https:
 ## Files to Look at
 
 * [Index.cshtml](./CS/AspNetCoreDashboard/Pages/Index.cshtml)
-* [_Layout.cshtml](./CS/AspNetCoreDashboard/Pages/_Layout.cshtml#L12-L38)
 * [DashboardUtils.cs](./CS/AspNetCoreDashboard/Code/DashboardUtils.cs#L18-L22)
+* [script.js](./CS/AspNetCoreDashboard/wwwroot/js/script.js)
 
 ## Documentation
 
