@@ -16,6 +16,7 @@ namespace AspNetCoreDashboard {
             configurator.SetDashboardStorage(dashboardFileStorage);
 
             var contextAccessor = serviceProvider.GetService<IHttpContextAccessor>();
+            
             configurator.CustomParameters += (s, e) => {
                 var value = Convert.ToInt32(contextAccessor?.HttpContext?.Request.Headers["ProductId"].FirstOrDefault());
                 e.Parameters.Add(new DashboardParameter("ProductIdParameter", typeof(int), value));

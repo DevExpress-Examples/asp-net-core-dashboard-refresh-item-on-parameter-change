@@ -8,39 +8,10 @@
 
 	<link href="css/site.min.css" rel="stylesheet" />
 
-	<script type="text/javascript">
-		function onBeforeRender(dashboardControl) {
-			dashboardControl.registerExtension(new DevExpress.Dashboard.DashboardPanelExtension(dashboardControl, { dashboardThumbnail: "./DashboardThumbnail/{0}.png" }));
-
-			var viewerApi = dashboardControl.findExtension('viewerApi');
-			if (viewerApi) {
-				viewerApi.on('itemMasterFilterStateChanged', e => onItemMasterFilterStateChanged(dashboardControl, e));
-			}
-		}
-
-		function onItemMasterFilterStateChanged(dashboardControl, e) {
-			if (e.itemName === 'gridDashboardItem1') {
-				var viewerApi = dashboardControl.findExtension('viewerApi');
-				var filterValues = viewerApi.getCurrentFilterValues(e.itemName);
-				if (filterValues) {
-					var itemData = viewerApi.getItemData(e.itemName);
-					var axisPoint = filterValues[0].getAxisPoint();
-					var slice = itemData.getSlice(axisPoint);
-					var productIdMeasure = slice.getMeasures().filter( m => m.dataMember === 'ProductID')[0];
-					var productId = slice.getMeasureValue(productIdMeasure.id).getValue();
-
-					// Send a ProductId value to the server using Request Headers
-					dashboardControl.remoteService.headers = { 'ProductId' : productId};
-					// Refresh the Chart Dashboard Item
-					dashboardControl.refresh(['chartDashboardItem1']);
-				}
-			}
-		}
-	</script>
+	<script src="js/site.min.js"></script>
+	<script src=js/script.js></script>
 </head>
 <body>
 	@RenderBody()
-
-	<script src="js/site.min.js"></script>
 </body>
 </html>

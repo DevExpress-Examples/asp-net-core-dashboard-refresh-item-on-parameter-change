@@ -7,16 +7,6 @@
 
 The example shows how to use dashboard parameters to update a specific dashboard item without refreshing the entire dashboard. This technique applies when you need to filter a data source's data to update a specific dashboard item, but do not want to refresh data in all items in a dashboard because this operation causes a performance delay.
 
-<!-- default file list -->
-## Files to Look at
-
-* [Index.cshtml](./CS/AspNetCoreDashboard/Pages/Index.cshtml)
-* [_Layout.cshtml](./CS/AspNetCoreDashboard/Pages/_Layout.cshtml#L12-L38)
-* [DashboardUtils.cs](./CS/AspNetCoreDashboard/Code/DashboardUtils.cs#L18-L22)
-<!-- default file list end -->
-
-## Example Structure
-
 The dashboard in the example has three items: 
 - The "Products" grid
 - The "Sales per Product" chart
@@ -27,6 +17,12 @@ The dashboard in the example has three items:
 All items are bound to different data sources. The "Products" grid item [filters](https://docs.devexpress.com/Dashboard/117060/web-dashboard/create-dashboards-on-the-web/interactivity/master-filtering) the "Sales per Product" chart values. 
 
 The selected master filter value is obtained on the client. The [headers](https://docs.devexpress.com/Dashboard/js-DevExpress.Dashboard.AjaxRemoteService#js_devexpress_dashboard_ajaxremoteservice_headers) property is used to pass the value to the server and change the parameter to filter the chart's data source. The [DashboardControl.refresh](https://docs.devexpress.com/Dashboard/js-DevExpress.Dashboard.DashboardControl?p=netframework#js_devexpress_dashboard_dashboardcontrol_refresh) method updates the chart item on the client side.
+
+## Files to Look at
+
+* [Index.cshtml](./CS/AspNetCoreDashboard/Pages/Index.cshtml)
+* [_Layout.cshtml](./CS/AspNetCoreDashboard/Pages/_Layout.cshtml#L12-L38)
+* [DashboardUtils.cs](./CS/AspNetCoreDashboard/Code/DashboardUtils.cs#L18-L22)
 
 ## Documentation
 
