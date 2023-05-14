@@ -18,7 +18,7 @@ All items are bound to different data sources. The "Products" grid item [filters
 
 The selected master filter value is obtained on the client. The [headers](https://docs.devexpress.com/Dashboard/js-DevExpress.Dashboard.AjaxRemoteService#js_devexpress_dashboard_ajaxremoteservice_headers) property is used to pass the value to the server and change the parameter to filter the chart's data source. The [DashboardControl.refresh](https://docs.devexpress.com/Dashboard/js-DevExpress.Dashboard.DashboardControl?p=netframework#js_devexpress_dashboard_dashboardcontrol_refresh) method updates the chart item on the client side.
 
-## Files to Look at
+## Files to Review
 
 * [Index.cshtml](./CS/AspNetCoreDashboard/Pages/Index.cshtml)
 * [DashboardUtils.cs](./CS/AspNetCoreDashboard/Code/DashboardUtils.cs#L18-L22)
